@@ -7,7 +7,7 @@ import {BiStore} from 'react-icons/bi'
 const FooterDefault = () => {
   return (
     <div className='block md:hidden bottom-0 fixed w-full'>
-        <div className='items-center bg-gray-700'>
+        {/* <div className='items-center bg-gray-700'>
             <div className='flex max-w-[1200px] mx-auto py-1 justify-between p-5'>
                 <button className='items-center justify-center align-center'><IoHomeOutline/><span>Home</span></button>
                 <button><MdOutlinePets/><span>Pets</span></button>
@@ -15,7 +15,7 @@ const FooterDefault = () => {
                 <button><IoNewspaperOutline/><span>Articles</span></button>
                 <button><AiOutlineUser/><span>Account</span></button>
             </div>
-        </div>
+        </div> */}
     </div>
   )
 }

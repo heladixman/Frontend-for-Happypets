@@ -6,7 +6,7 @@ const Marketplace = () => {
   const productList = productData.map((product,key) => {
     return (
       <div key={key}>
-        <Link to={`${product.url}`}>{product.name}</Link>
+        <Link to={`${product.id}`}>{product.name}</Link>
       </div>
     )
   })

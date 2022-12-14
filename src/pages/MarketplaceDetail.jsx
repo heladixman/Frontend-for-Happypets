@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom'
 import { productData } from '../content/files/dummyData'
 
 const MarketplaceDetail = () => {
-    const { productURL} = useParams()
-    const thisProduct = productData.find((prod) => prod.url === productURL)
+    const { id} = useParams()
+    const thisProduct = productData.find((prod) => prod.id === id)
     return (
         <>{thisProduct.name}</>
   )

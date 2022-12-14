@@ -3,8 +3,10 @@ module.exports = {
     darkMode: 'class',
     theme: {
       fontFamily: {
+        nunito: ['Nunito', 'sans-serif'],
         display: ['Open Sans', 'sans-serif'],
         body: ['Open Sans', 'sans-serif'],
+        
       },
       extend: {
         fontSize: {
@@ -17,11 +19,15 @@ module.exports = {
           'secondary-dark-bg': '#33373E',
           'light-gray': '#F7F7F7',
           'half-transparent': 'rgba(0, 0, 0, 0.5)',
+          'card1': '#f3d9cf',
+          'card2' : '#ff6f47',
         },
         colors:{
           'main-color': '#00df9a',
           'shadow-color': '#9dfadd',
-          'gradient-color': '#08bf86'
+          'gradient-color': '#08bf86',
+          'card-grad1': '#f3d9cf',
+          'card-grad2' : '#ff6f47'
         },
         borderWidth: {
           1: '1px',

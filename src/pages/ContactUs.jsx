@@ -1,38 +1,31 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { contactForm, addressStore } from '../content/files/dummyData'
 
 
 const ContactUs = () => {
   return (
-    <div className=''>
-      <div className='w-full'><iframe width="1150" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=al%20petshop&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
-      <div className='mx-auto flex justify-between mt-10 max-w-2xl bg-slate-100 p-10'>
-        <div className='w-3/6 mr-10'>
-          <div className='justify-center'>
-            <form action="">
-            <label for="product-name" class="text-black dark:text-gray-200 w-1/5">Hubungi Kami</label>
-              {contactForm.map((item, key) => (
-                <div key={key} className='content-center items-center w-full'>
-                  <input className="shadow-sm bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 my-2" placeholder={item.placeholder} required></input>
-                </div>
-              ))}
-              <textarea className='shadow-sm bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 my-2' name="pesan" id="" cols="30" rows="5" placeholder='masukkan pesanmu disini'></textarea>
-              <button type="submit" className='bg-sky-500 w-full hover:bg-sky-700 px-5 py-2.5 text-sm leading-5 rounded-md font-semibold text-white'>Kirim Pesan</button>
-            </form>
-          </div>
-        </div>
-        <div className='w-3/6'>
-          <div className='justify-center'>Alamat Toko
-           {addressStore.map((item) => (
-            <div className='my-2'>
-              <span className='font-bold'>{item.nameStore}</span>
-              <p>{item.address}</p>
-            </div>
-           ))}
-            </div>
-          </div>
+    <div>
+      <Helmet>
+        <title>Contact Us | Happypets</title>
+      </Helmet>
+
+      <div class="w-full flex">
+					<div class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg bg-[url('https://source.unsplash.com/Mv9hjnEUHR4/600x800')]"></div>
+					<div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
+						<h3 class="pt-4 text-2xl text-center">Hubungi Kami</h3>
+            <h3 class="text-sm text-center">Tanyakan sesuatu kepada kami</h3>
+						<form class="px-8 pt-6 pb-8 mb-4 bg-white rounded">
+							<div class="mb-4">
+                <div class="mb-2"><label for="name" class="block text-sm font-semibold text-gray-800">Nama</label><input type="text" required class="block w-full px-4 py-2 mt-2 text-black bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"/></div>
+                <div class="mb-2"><label for="email" class="block text-sm font-semibold text-gray-800">Email</label><input type="email" required class="block w-full px-4 py-2 mt-2 text-black bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"/></div>
+                <div class="mb-2"><label for="Message" class="block text-sm font-semibold text-gray-800">Pesan</label><textarea name="message" rows="6" cols="50" class="block w-full px-4 py-2 mt-2 text-black bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"></textarea></div>
+              </div>
+              <button class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-card2 rounded-md hover:bg-card1 focus:outline-none focus:bg-card2" type="submit">Kirim Pesan</button>
+						</form>
+					</div>
+				</div>
       </div>
-    </div>
     
   )
 }

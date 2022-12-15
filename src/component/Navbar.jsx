@@ -3,25 +3,28 @@ import { AiOutlineClose, AiOutlineMenu, AiOutlineShoppingCart, AiOutlineSearch }
 import { IoIosNotificationsOutline } from 'react-icons/io';
 import { BsCart3 } from 'react-icons/bs'
 import { Links } from '../content/files/dummyData';
+import { Cart } from '../pages';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [cart, setCart] = useState(false);
 
-  const statusLogin = true
+  const handleCart = () =>{
+    setCart(!cart)
+  }
 
   const handleNav = () => {
     setNav(!nav);
   };
 
-  const activeNavbar = 'left-0 top-0 w-[55%] h-full bg-white ease-in-out duration-500 z-20 fixed shadow-2xl';
-  const normalNavbar = 'left-[-100%] top-0 w-[55%] h-full bg-white ease-in-out duration-500 fixed';
-  const loginRegisButton = 'text-white bg-gradient-to-r from-main-color to-gradient-color hover:bg-blue-800 font-medium shadow-lg hover:shadow-shadow-color hover: rounded-full text-sm px-5 py-2.5 text-center'
+  const activeNavbar = 'z-100 left-0 top-0 w-[55%] h-full bg-white ease-in-out duration-500 z-20 fixed shadow-2xl';
+  const normalNavbar = 'z-100 left-[-100%] top-0 w-[55%] h-full bg-white ease-in-out duration-500 fixed';
+  const signInButton = 'text-white bg-card2 hover:shadow-xl hover: rounded-full text-sm px-5 py-2.5 text-center'
 
   return (
-    <div className='pt-6'>
-      {/* Bottom Navbar */}
-      <div className=' flex justify-between items-center max-w-[1200px] px-4 mx-auto'>
-        <div className='flex items-center'>
+      <div className='fixed top-0 w-full bg-gray-100 shadow-lg shadow-gray-100'>
+        <div className='py-3 flex justify-between items-center max-w-[1200px] px-4 mx-auto'>
+        <div className='items-center'>
           <div>
             <button onClick={handleNav} className='block md:hidden text-gray-500 p-0 mr-2'>
                 {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} />}
@@ -29,7 +32,7 @@ const Navbar = () => {
             <div>
               <ul className={nav ? activeNavbar : normalNavbar}>
                 <div className='flex items-center'>
-                  <h1 className='w-full text-3xl font-bold text-button-bg m-4 text-main-color'><a href="/">HAPPYPETS</a></h1>
+                  <h1 className='w-full text-3xl font-bold text-button-bg m-4 text-card-grad2'><a href="/">HAPPYPETS</a></h1>
                   <div className='text-main-color m-2'>
                     <div className='bg-white rounded-full shadow-lg shadow-gray-500/50 items-center px-1'>
                       <button onClick={handleNav}><AiOutlineClose size={15}/></button></div>
@@ -46,40 +49,35 @@ const Navbar = () => {
             </div>
           </div>
           <div>
-            <h1 className='w-1/5 text-xl font-bold text-main-color hidden lg:block'><a href="/">HAPPYPETS</a></h1>
+            <h1 className='w-1/5 text-2xl font-bold text-card-grad2 hidden lg:block'><a href="/">HAPPYPETS</a></h1>
           </div>
         </div>
         <div className='w-3/5'>
           <div className='flex justify-center'>{Links.map((link, key) =>(
             <div key={key}>
-              <a href={link.linkName} className="pr-5 text-gray-500 text-md font-thin hidden lg:block">{link.title}</a>
+              <a href={link.linkName} className="p-2 m-2 rounded-lg text-gray-500 text-sm font-thin hidden lg:block hover:bg-gray-200 focus:bg-gray-300">{link.title}</a>
             </div>))}
           </div>
         </div>
-        <div className='flex justify-between'>
-          <button className='flex relative items-center w-8'>
+        <div className='flex flex-wrap justify-between'>
+          <button className='flex relative items-center w-8 mr-2' onClick={handleCart}>
             <div className='text-gray-500'><BsCart3 size={25}/></div>
-            <span className='max-h-3 max-w-6 absolute top-0 right-0 text-[9px] bg-red-500 rounded-lg px-1 font-bold text-white'>+99</span>
+            <span className='absolute top-0 right-0 text-[9px] bg-red-500 rounded-full px-1 text-white'></span>
           </button>
-          <button className='flex relative items-center w-8 ml-2 hidden lg:block'>
-          <div className='text-gray-500'><IoIosNotificationsOutline size={30}/></div>
-            <span className='max-h-3 max-w-6 absolute top-0 right-0 text-[9px] bg-red-500 rounded-lg px-1 font-bold text-white'>+99</span>
-          </button>
-        </div>
-        <div className='flex flex-wrap'>
           <div className='hidden lg:block pr-2'>
-            <a href="/login">
+            <a href="/sign-up">
               <button type="button" className='rounded-full py-2.5 px-5 text-sm bg-gray-200'>Sign Up</button>
             </a>
           </div>
           <div className='hidden lg:block'>
-            <a href="/login">
-              <button type="button" className={loginRegisButton}>Sign In</button>
+            <a href="/sign-in">
+              <button type="button" className={signInButton}>Sign In</button>
             </a>
           </div>
+          {cart ? ( <Cart/>):(<div></div>)}
+        </div>
         </div>
       </div>
-    </div>
   );
 };
 

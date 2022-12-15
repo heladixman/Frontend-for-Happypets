@@ -1,3 +1,7 @@
+import {FaFacebook, FaTwitter, FaYoutube} from 'react-icons/fa'
+import {GrInstagram} from 'react-icons/gr'
+import catCard from '../images/cat.png'
+
 export const Links = [
     {
         title: 'Home',
@@ -159,4 +163,34 @@ export const productData =  [
       nameStore: "Cabang 2",
       address: "Jl. Ahmad Yani No.71, Kabil, Kecamatan Nongsa, Kota Batam, Kepulauan Riau 29433"
     },
+  ]
+
+  export const footerSocial = [
+    {
+      name: 'Facebook',
+      icon: <FaFacebook/>,
+      link: 'facebook.com'
+    },
+    {
+      name: 'Instagram',
+      icon: <GrInstagram/>,
+      link: 'instagram.com'
+    },
+    {
+      name: 'Twitter',
+      icon: <FaTwitter/>,
+      link: 'twitter.com'
+    },
+    {
+      name: 'Youtube',
+      icon: <FaYoutube/>,
+      link: 'youtube.com'
+    },
+  ]
+
+  export const cardImage =[
+    {
+      name: 'cat',
+      image: catCard
+    }
   ]

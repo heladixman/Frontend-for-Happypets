@@ -1,18 +1,16 @@
 import React from 'react'
-import {productData} from '../content/files/dummyData'
-import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 const Marketplace = () => {
-  const productList = productData.map((product,key) => {
     return (
-      <div key={key}>
-        <Link to={`${product.id}`}>{product.name}</Link>
+      <div>
+        <Helmet>
+          <title>Marketplace | Happypets</title>
+        </Helmet>
+
+
       </div>
     )
-  })
-  return (
-    <>{productList}</>
-  )
 }
 
 export default Marketplace

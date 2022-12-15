@@ -1,9 +1,15 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { articleList } from '../content/files/dummyData'
 
 const Articles = () => {
   return (
-    <div className='flex flex-wrap justify-between'>
+    <div>
+      <Helmet>
+        <title>Articles | Happypets</title>
+      </Helmet>
+
+      <div className='flex flex-wrap justify-between'>
       {articleList.map((item, key) =>(
         <div key={key} className="max-w-[48%] lg:w-[18%] md:w-[30%] mb-5 bg-white border border-gray-200 rounded-lg shadow-md">
         <a href="#"><img className="rounded-t-lg w-full" src={item.image} alt="" /></a>
@@ -13,6 +19,7 @@ const Articles = () => {
         </div>
     </div>
       ))}
+    </div>
     </div>
   )
 }

@@ -1,30 +1,32 @@
 import './App.css'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import {NotFound, Homepage, PetPage, Marketplace, Articles, MarketplaceDetail, AboutUs, ContactUs, Login, Navbar, FooterDefault, Heroku} from './pages'
+import {NotFound, Homepage, PetPage, Marketplace, Articles, MarketplaceDetail, AboutUs, ContactUs, Login, Navbar, FooterDefault, Heroku, Cart, SingleProduct, Register, Profile} from './pages'
 
 function App() {
   return (
     <div className="App">
-      <div className='border-b-2 border-gray-100 shadow-lg shadow-gray-100 bg-gray-100'>
+      <div>
         <Navbar/>
-        <Heroku/>
       </div>
-      <div className='flex justify-between items-center mt-8 max-w-[1200px] mx-auto px-4'>
+      <div className='mt-24 max-w-[1200px] mx-auto px-4'>
       <Router>
         <Routes>
           <Route path='*' element={(<NotFound />)} />
           <Route path='/' element={(<Homepage />)} />
           <Route path='pets' element={(<PetPage />)} />
+          <Route path='profile' element={(<Profile />)} />
           <Route path='articles' element={(<Articles />)} />
           <Route path='about-us' element={(<AboutUs />)} />
           <Route path='contact-us' element={(<ContactUs />)} />
           <Route path='marketplace' element={(<Marketplace />)}/>
           <Route path='marketplace/:id' element={(<MarketplaceDetail />)}/>
-          <Route path='login' element={(<Login />)}/>
+          <Route path='marketplace/product/:id' element={(<SingleProduct />)}/>
+          <Route path='sign-in' element={(<Login />)}/>
+          <Route path='sign-up' element={(<Register />)}/>
         </Routes>
       </Router>
       </div>
-      <div>
+      <div className='relative h-36'>
         <FooterDefault/>
       </div>
     </div>

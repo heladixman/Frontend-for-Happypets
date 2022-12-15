@@ -22,6 +22,9 @@ module.exports = {
           'card1': '#f3d9cf',
           'card2' : '#ff6f47',
         },
+        backgroundImage:{
+          'heroContact' : "url('https://source.unsplash.com/Mv9hjnEUHR4/600x800')"
+        },
         colors:{
           'main-color': '#00df9a',
           'shadow-color': '#9dfadd',

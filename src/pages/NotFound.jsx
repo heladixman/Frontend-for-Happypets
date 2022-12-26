@@ -1,5 +1,4 @@
 import React from 'react'
-import NotFoundSVG from '../content/files/NotFoundSVG'
 import {Link} from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
@@ -19,7 +18,7 @@ const NotFound = () => {
             <div className="w-full lg:w-1/2">
                 <h1 className="py-4 text-3xl lg:text-4xl font-extrabold text-gray-800">Halaman Tidak Ditemukan</h1>
                 <p className="text-base text-gray-800">Jika halaman yang kamu cari tidak ditemukan silahkan periksa kembali link tujuan.</p>
-                <button className="w-full lg:w-auto my-4 border rounded-md px-1 sm:px-16 py-5 bg-indigo-600 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-opacity-50"><a href="/">Kembali ke halaman utama</a></button>
+                <button className="w-full lg:w-auto my-4 border rounded-md px-1 sm:px-16 py-5 bg-slate-600 text-white hover:bg-card2 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-opacity-50"><a href="/">Kembali ke halaman utama</a></button>
             </div>
         </div>
     </div>

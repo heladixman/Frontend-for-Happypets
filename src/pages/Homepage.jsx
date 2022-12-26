@@ -10,7 +10,7 @@ import { CartContext } from '../content/files/CartContext';
 const Homepage = () => {
   // ambil data product dari ProductContext
   const products = useContext(ProductContext);
-  // console.log(products)
+  console.log(products)
 
   const filterMenProduct = products.filter((item) => {
     return (
@@ -26,7 +26,6 @@ const Homepage = () => {
       </Helmet>
 
     <section>
-      {/* product */}
       <div>
         <Heroku/>
         <div className='my-5'>

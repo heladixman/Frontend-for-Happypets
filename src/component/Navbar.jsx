@@ -8,6 +8,7 @@ import { Cart } from '../pages';
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [cart, setCart] = useState(false);
+  const [link, setLink] = useState(false)
 
   const handleCart = () =>{
     setCart(!cart)
@@ -17,6 +18,9 @@ const Navbar = () => {
     setNav(!nav);
   };
 
+  const activeLink = () =>{
+    setLink()
+  }
   const activeNavbar = 'z-100 left-0 top-0 w-[55%] h-full bg-white ease-in-out duration-500 z-20 fixed shadow-2xl';
   const normalNavbar = 'z-100 left-[-100%] top-0 w-[55%] h-full bg-white ease-in-out duration-500 fixed';
   const signInButton = 'text-white bg-card2 hover:shadow-xl hover: rounded-full text-sm px-5 py-2.5 text-center'
@@ -54,7 +58,7 @@ const Navbar = () => {
         </div>
         <div className='w-3/5'>
           <div className='flex justify-center'>{Links.map((link, key) =>(
-            <div key={key}>
+            <div key={key} className={({isActive}) => (isActive ? "text" : "aaa")}>
               <a href={link.linkName} className="p-2 m-2 rounded-lg text-gray-500 text-sm font-thin hidden lg:block hover:bg-gray-200 focus:bg-gray-300">{link.title}</a>
             </div>))}
           </div>

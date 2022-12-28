@@ -1,17 +1,17 @@
-export { default as Homepage} from './Homepage'
-export { default as NotFound} from './NotFound'
-export { default as PetPage} from './PetPage'
-export { default as Marketplace} from './Marketplace'
-export { default as Articles} from './Articles'
-export { default as AboutUs} from './AboutUs'
-export { default as ContactUs} from './ContactUs'
-export { default as MarketplaceDetail} from './MarketplaceDetail'
-export { default as SingleProduct} from './SingleProduct'
-export { default as Login} from './Login'
-export { default as Register} from './Register'
-export { default as Profile} from './Profile'
-export { default as Navbar} from '../component/Navbar'
-export { default as Heroku} from '../component/Heroku'
-export { default as Cart} from '../component/Cart'
-export { default as CartItem} from '../component/subComponent/CartItem'
-export { default as FooterDefault} from '../component/FooterDefault' 
+export { default as Homepage } from "./Homepage";
+export { default as NotFound } from "./NotFound";
+export { default as PetPage } from "./PetPage";
+export { default as Marketplace } from "./Marketplace";
+export { default as Articles } from "./Articles";
+export { default as AboutUs } from "./AboutUs";
+export { default as ContactUs } from "./ContactUs";
+export { default as MarketplaceDetail } from "./MarketplaceDetail";
+export { default as SingleProduct } from "./SingleProduct";
+export { default as Login } from "./Login";
+export { default as Register } from "./Register";
+export { default as Profile } from "./Profile";
+export { default as Navbar } from "../component/Navbar";
+export { default as Heroku } from "../component/Heroku";
+export { default as Cart } from "../component/Cart";
+export { default as CartItem } from "../component/subComponent/CartItem";
+export { default as FooterDefault } from "../component/FooterDefault";

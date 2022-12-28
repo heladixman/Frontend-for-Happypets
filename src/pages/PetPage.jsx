@@ -1,16 +1,14 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
+import React from "react";
+import { Helmet } from "react-helmet";
 
 const PetPage = () => {
   return (
     <div>
-       <Helmet>
+      <Helmet>
         <title>Pets | Happypets</title>
       </Helmet>
-
-
     </div>
-  )
-}
+  );
+};
 
-export default PetPage
+export default PetPage;
